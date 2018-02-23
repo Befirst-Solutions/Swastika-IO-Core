@@ -11,8 +11,7 @@
 @{
     var translator = SWCmsHelper.GetTranslator(ViewBag.culture);
 
-    var getListAvailbleModules = Swastika.Cms.Lib.ViewModels.Info.InfoModuleViewModel.Repository.GetModelListBy(
-m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
+    var getListAvailbleModules = Swastika.Cms.Lib.ViewModels.Info.InfoModuleViewModel.Repository.GetModelListBy(m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
     var listAvaiModule = getListAvailbleModules.Data;
     // ModuleRepository.GetInstance().GetModelListBy(m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
     var getAvailableCategories = Swastika.Cms.Lib.ViewModels.Info.InfoCategoryViewModel.Repository.GetModelListBy(m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
@@ -37,12 +36,12 @@ m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
 
     <ul class="sw-links" id="sw-docs-nav" data-children=".sw-toc-item">
         <!-- DASHBOARD -->
-        <li class="sw-toc-item mt-1 mb-1">
-            <a asp-area="Portal" asp-controller="Dashboard" asp-action="Index" class="sw-toc-link">
-                <i class="mi mi-Tiles mi-lg mi-fw"></i>
-                <span class="text">@translator.Get("Dashboard")</span>
-            </a>
-        </li>
+        @*<li class="sw-toc-item mt-1 mb-1">
+                <a asp-area="Portal" asp-controller="Dashboard" asp-action="Index" class="sw-toc-link">
+                    <i class="mi mi-Tiles mi-lg mi-fw"></i>
+                    <span class="text">@translator.Get("Dashboard")</span>
+                </a>
+            </li>*@
 
         <!-- ARTICLE -->
         <li class="sw-toc-item mt-1 mb-1 mb-1" is-active-menu asp-controllers="Articles">
@@ -54,9 +53,9 @@ m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
                     <a asp-area="Portal" asp-controller="Articles" asp-action="Index" class="btn btn-light">
                         <span class="oi oi-list"></span>
                     </a>
-                    <a asp-area="Portal" asp-controller="Articles" asp-action="Draft" class="btn btn-light">
-                        <span class="oi oi-clipboard"></span>
-                    </a>
+                    @*<a asp-area="Portal" asp-controller="Articles" asp-action="Draft" class="btn btn-light">
+                            <span class="oi oi-clipboard"></span>
+                        </a>*@
                     <a href="#" class="btn btn-light" data-toggle="collapse" data-target="#collapseArticleSubMenus" role="button" aria-expanded="false"
                        aria-controls="collapseArticleSubMenus">
                         <span class="oi oi-chevron-right"></span>
@@ -81,12 +80,12 @@ m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
                         <span class="text">List Article</span>
                     </a>
                 </li>
-                <li>
-                    <a asp-area="Portal" asp-controller="Articles" asp-action="Draft" class="sw-toc-sub-link mb-1">
-                        <i class="mi mi-Paste mi-fw"></i>
-                        <span class="text">Draft</span>
-                    </a>
-                </li>
+                @*<li>
+                        <a asp-area="Portal" asp-controller="Articles" asp-action="Draft" class="sw-toc-sub-link mb-1">
+                            <i class="mi mi-Paste mi-fw"></i>
+                            <span class="text">Draft</span>
+                        </a>
+                    </li>*@
 
                 <li class="hide-on-sb-inactive">
                     <div class="sw-toc-sub-link mb-1">
@@ -121,9 +120,9 @@ m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
                     <a asp-area="Portal" asp-controller="Product" asp-action="Index" class="btn btn-light">
                         <span class="oi oi-list"></span>
                     </a>
-                    <a asp-area="Portal" asp-controller="Product" asp-action="Draft" class="btn btn-light">
-                        <span class="oi oi-clipboard"></span>
-                    </a>
+                    @*<a asp-area="Portal" asp-controller="Product" asp-action="Draft" class="btn btn-light">
+                            <span class="oi oi-clipboard"></span>
+                        </a>*@
                     <a href="#" class="btn btn-light" data-toggle="collapse" data-target="#collapseProductSubMenus" role="button" aria-expanded="false"
                        aria-controls="collapseProductSubMenus">
                         <span class="oi oi-chevron-right"></span>
@@ -148,12 +147,12 @@ m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
                         <span class="text">List Product</span>
                     </a>
                 </li>
-                <li>
-                    <a asp-area="Portal" asp-controller="Product" asp-action="Draft" class="sw-toc-sub-link mb-1">
-                        <i class="mi mi-Paste mi-fw"></i>
-                        <span class="text">Draft</span>
-                    </a>
-                </li>
+                @*<li>
+                        <a asp-area="Portal" asp-controller="Product" asp-action="Draft" class="sw-toc-sub-link mb-1">
+                            <i class="mi mi-Paste mi-fw"></i>
+                            <span class="text">Draft</span>
+                        </a>
+                    </li>*@
 
                 <li class="hide-on-sb-inactive">
                     <div class="sw-toc-sub-link mb-1">
@@ -216,12 +215,12 @@ m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
                         <span class="text">List Article</span>
                     </a>
                 </li>
-                <li>
-                    <a asp-area="Portal" asp-controller="Pages" asp-action="" class="sw-toc-sub-link mb-1">
-                        <i class="mi mi-Paste mi-fw"></i>
-                        <span class="text">Draft</span>
-                    </a>
-                </li>
+                @*<li>
+                        <a asp-area="Portal" asp-controller="Pages" asp-action="" class="sw-toc-sub-link mb-1">
+                            <i class="mi mi-Paste mi-fw"></i>
+                            <span class="text">Draft</span>
+                        </a>
+                    </li>*@
 
                 @foreach (var cate in listAvaiPage)
                 {
@@ -299,12 +298,12 @@ m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
                         <span class="text">List Module</span>
                     </a>
                 </li>
-                <li>
-                    <a data-target="#" class="sw-toc-sub-link mb-1">
-                        <i class="mi mi-Paste mi-fw"></i>
-                        <span class="text">Draft</span>
-                    </a>
-                </li>
+                @*<li>
+                        <a data-target="#" class="sw-toc-sub-link mb-1">
+                            <i class="mi mi-Paste mi-fw"></i>
+                            <span class="text">Draft</span>
+                        </a>
+                    </li>*@
                 @foreach (var module in listAvaiModule)
                 {
                     <li class="hide-on-sb-inactive">
@@ -331,52 +330,52 @@ m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
             </ul>
         </li>
 
-        <!-- MODULE -->
-        <li class="sw-toc-item mt-1 mb-1" is-active-menu asp-controllers="Module">
+        <!-- WIDGET -->
+        @*<li class="sw-toc-item mt-1 mb-1" is-active-menu asp-controllers="Module">
 
-            <div class="inner">
-                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                    <a is-active-route asp-controller="Module" asp-action="Create" class="btn btn-light">
-                        <span class="oi oi-plus"></span>
-                    </a>
-                    <a asp-area="Portal" asp-controller="Module" asp-action="Index" class="btn btn-light">
-                        <span class="oi oi-list"></span>
-                    </a>
-                    <a class="btn btn-light">
-                        <span class="oi oi-clipboard"></span>
-                    </a>
-                    <a href="#" class="btn btn-light" data-toggle="collapse" data-target="#collapseModuleSubMenus" aria-expanded="false"
-                       aria-controls="collapseModuleSubMenus">
-                        <span class="oi oi-chevron-right"></span>
-                    </a>
+                <div class="inner">
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                        <a is-active-route asp-controller="Module" asp-action="Create" class="btn btn-light">
+                            <span class="oi oi-plus"></span>
+                        </a>
+                        <a asp-area="Portal" asp-controller="Module" asp-action="Index" class="btn btn-light">
+                            <span class="oi oi-list"></span>
+                        </a>
+                        <a class="btn btn-light">
+                            <span class="oi oi-clipboard"></span>
+                        </a>
+                        <a href="#" class="btn btn-light" data-toggle="collapse" data-target="#collapseModuleSubMenus" aria-expanded="false"
+                           aria-controls="collapseModuleSubMenus">
+                            <span class="oi oi-chevron-right"></span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="sw-toc-link" data-toggle="collapse" data-target="#collapseWidgetSubMenus" aria-expanded="false"
-                 aria-controls="collapseWidgetSubMenus">
-                <i class="mi mi-Component mi-lg mi-fw"></i>
-                <span class="text">@translator.Get("Widgets")</span>
-            </div>
-            <ul id="collapseWidgetSubMenus" class="collapse list-unstyled" data-parent="#sw-docs-nav">
-                <li>
-                    <a is-active-route asp-controller="Widget" asp-action="Create" class="sw-toc-sub-link mb-1">
-                        <i class="mi mi-Add  mi-fw"></i>
-                        <span class="text">Create Widget</span>
-                    </a>
-                </li>
-                <li>
-                    <a asp-area="Portal" asp-controller="Widget" asp-action="Index" class="sw-toc-sub-link mb-1">
-                        <i class="mi mi-List mi-fw"></i>
-                        <span class="text">List Widget</span>
-                    </a>
-                </li>
-                <li>
-                    <a data-target="#" class="sw-toc-sub-link mb-1">
-                        <i class="mi mi-Paste mi-fw"></i>
-                        <span class="text">Draft</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
+                <div class="sw-toc-link" data-toggle="collapse" data-target="#collapseWidgetSubMenus" aria-expanded="false"
+                     aria-controls="collapseWidgetSubMenus">
+                    <i class="mi mi-Component mi-lg mi-fw"></i>
+                    <span class="text">@translator.Get("Widgets")</span>
+                </div>
+                <ul id="collapseWidgetSubMenus" class="collapse list-unstyled" data-parent="#sw-docs-nav">
+                    <li>
+                        <a is-active-route asp-controller="Widget" asp-action="Create" class="sw-toc-sub-link mb-1">
+                            <i class="mi mi-Add  mi-fw"></i>
+                            <span class="text">Create Widget</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Portal" asp-controller="Widget" asp-action="Index" class="sw-toc-sub-link mb-1">
+                            <i class="mi mi-List mi-fw"></i>
+                            <span class="text">List Widget</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-target="#" class="sw-toc-sub-link mb-1">
+                            <i class="mi mi-Paste mi-fw"></i>
+                            <span class="text">Draft</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>*@
 
         <!-- THEME -->
         <li class="sw-toc-item mt-1 mb-1">
@@ -491,42 +490,42 @@ m => m.Specificulture == ViewContext.RouteData.Values["culture"].ToString());
         </li>
 
         <!-- TEAM -->
-        <li class="sw-toc-item mt-1 mb-1">
+        @*<li class="sw-toc-item mt-1 mb-1">
 
-            <div class="inner">
-                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                    <a asp-area="Portal" asp-controller="Team" asp-action="Create" class="btn btn-light">
-                        <span class="oi oi-plus"></span>
-                    </a>
-                    <a asp-area="Portal" asp-controller="Team" asp-action="Index" class="btn btn-light">
-                        <span class="oi oi-list"></span>
-                    </a>
-                    <a href="#" class="btn btn-light" data-toggle="collapse" data-target="#collapseTeamSubMenus" aria-expanded="false"
-                       aria-controls="collapseTeamSubMenus">
-                        <span class="oi oi-chevron-right"></span>
-                    </a>
+                <div class="inner">
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                        <a asp-area="Portal" asp-controller="Team" asp-action="Create" class="btn btn-light">
+                            <span class="oi oi-plus"></span>
+                        </a>
+                        <a asp-area="Portal" asp-controller="Team" asp-action="Index" class="btn btn-light">
+                            <span class="oi oi-list"></span>
+                        </a>
+                        <a href="#" class="btn btn-light" data-toggle="collapse" data-target="#collapseTeamSubMenus" aria-expanded="false"
+                           aria-controls="collapseTeamSubMenus">
+                            <span class="oi oi-chevron-right"></span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="sw-toc-link" data-toggle="collapse" data-target="#collapseTeamSubMenus" aria-expanded="false"
-                 aria-controls="collapseTeamSubMenus">
-                <i class="mi mi-Contact mi-lg mi-fw"></i>
-                <span class="text">@translator.Get("Team")</span>
-            </div>
-            <ul id="collapseTeamSubMenus" class="collapse list-unstyled" data-parent="#sw-docs-nav">
-                <li>
-                    <a asp-area="Portal" asp-controller="Team" asp-action="Create" class="sw-toc-sub-link mb-1">
-                        <i class="mi mi-Add  mi-fw"></i>
-                        <span class="text">Create Member</span>
-                    </a>
-                </li>
-                <li>
-                    <a asp-area="Portal" asp-controller="Team" asp-action="Index" class="sw-toc-sub-link mb-1">
-                        <i class="mi mi-List mi-fw"></i>
-                        <span class="text">List Member</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
+                <div class="sw-toc-link" data-toggle="collapse" data-target="#collapseTeamSubMenus" aria-expanded="false"
+                     aria-controls="collapseTeamSubMenus">
+                    <i class="mi mi-Contact mi-lg mi-fw"></i>
+                    <span class="text">@translator.Get("Team")</span>
+                </div>
+                <ul id="collapseTeamSubMenus" class="collapse list-unstyled" data-parent="#sw-docs-nav">
+                    <li>
+                        <a asp-area="Portal" asp-controller="Team" asp-action="Create" class="sw-toc-sub-link mb-1">
+                            <i class="mi mi-Add  mi-fw"></i>
+                            <span class="text">Create Member</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Portal" asp-controller="Team" asp-action="Index" class="sw-toc-sub-link mb-1">
+                            <i class="mi mi-List mi-fw"></i>
+                            <span class="text">List Member</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>*@
 
         <!-- SETTING -->
         <li class="sw-toc-item mt-1 mb-1">

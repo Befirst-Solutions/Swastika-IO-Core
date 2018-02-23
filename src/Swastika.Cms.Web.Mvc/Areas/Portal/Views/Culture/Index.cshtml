@@ -21,46 +21,45 @@
                         <a asp-area="Portal" asp-controller="Pages" asp-action="Draft" class="btn btn-secondary"><i class="mi mi-Paste"></i></a>*@
                 </div>
                 <div class="btn-group mr-2" role="group" aria-label="Button group with nested dropdown">
-                    <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            All types
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="#">All types</a>
-                            <a class="dropdown-item" href="#">Images</a>
-                            <a class="dropdown-item" href="#">Audios</a>
-                            <a class="dropdown-item" href="#">Videos</a>
-                            <a class="dropdown-item" href="#">Documents</a>
-                            <a class="dropdown-item" href="#">Zips</a>
-                            <a class="dropdown-item" href="#">Others</a>
-                        </div>
-                    </div>
+                    @*<div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All types
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <a class="dropdown-item" href="#">All types</a>
+                                <a class="dropdown-item" href="#">Images</a>
+                                <a class="dropdown-item" href="#">Audios</a>
+                                <a class="dropdown-item" href="#">Videos</a>
+                                <a class="dropdown-item" href="#">Documents</a>
+                                <a class="dropdown-item" href="#">Zips</a>
+                                <a class="dropdown-item" href="#">Others</a>
+                            </div>
+                        </div>*@
                 </div>
                 <div class="btn-group mr-2" role="group" aria-label="Button group with nested dropdown">
-                    <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            All times
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="#">Jan 2018</a>
-                            <a class="dropdown-item" href="#">Dec 2017</a>
-                            <a class="dropdown-item" href="#">Nov 2017</a>
-                        </div>
-                    </div>
+                    @*<div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All times
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <a class="dropdown-item" href="#">Jan 2018</a>
+                                <a class="dropdown-item" href="#">Dec 2017</a>
+                                <a class="dropdown-item" href="#">Nov 2017</a>
+                            </div>
+                        </div>*@
                 </div>
             </div>
         </div>
         <div class="col-md-4">
-
-            <div class="pull-right">
-                @*@fromValue  - @toValue
-                    / @Model.TotalItems*@
-                <div class="btn-group">
-                    <a asp-route-pageSize="@Model.PageSize" asp-route-pageIndex="@prevPage" class="btn btn-default btn-sm"><span class="oi oi-chevron-left"></span></a>
-                    <a asp-route-pageSize="@Model.PageSize" asp-route-pageIndex="@nextPage" class="btn btn-default btn-sm"><span class="oi oi-chevron-right"></span></a>
+            @*
+                <div class="pull-right">
+                    <div class="btn-group">
+                        <a asp-route-pageSize="@Model.PageSize" asp-route-pageIndex="@prevPage" class="btn btn-default btn-sm"><span class="oi oi-chevron-left"></span></a>
+                        <a asp-route-pageSize="@Model.PageSize" asp-route-pageIndex="@nextPage" class="btn btn-default btn-sm"><span class="oi oi-chevron-right"></span></a>
+                    </div>
+                    <!-- /.btn-group -->
                 </div>
-                <!-- /.btn-group -->
-            </div>
+            *@
         </div>
     </div>
 
